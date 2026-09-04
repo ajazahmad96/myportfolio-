@@ -8,22 +8,43 @@
 const PROJECTS = [
   {
     number: '01',
-    name: 'PULSE',
+    name: 'AjazEdits',
     description:
-      'A gamified productivity PWA — XP and leveling, streak tracking, and daily/weekly reports with a canvas-based report card export.',
+      'Personal brand website for video-editing services — work showcase, services, testimonials, and a contact section.',
     tech: ['HTML', 'CSS', 'JavaScript'],
-    demoUrl: '#',
-    githubUrl: '#',
+    demoUrl: 'https://ajazedits.vercel.app/',
+    githubUrl: '#', // TODO: add the repo link
     placeholder: false,
   },
   {
     number: '02',
-    name: 'Next project',
-    description: 'In progress — details go here once it\u2019s ready to show.',
-    tech: [],
-    demoUrl: null,
-    githubUrl: null,
-    placeholder: true,
+    name: 'Mr.SelfDecode',
+    description:
+      'A multi-page content and brand website for a self-improvement platform, with course, YouTube, and community pages.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://mrselfdecode.vercel.app/',
+    githubUrl: '#', // TODO: add the repo link
+    placeholder: false,
+  },
+  {
+    number: '03',
+    name: 'PULSE',
+    description:
+      'A gamified productivity PWA — XP and leveling, streak tracking, and daily/weekly reports with a canvas-based report card export.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://taskpulse2181.vercel.app/',
+    githubUrl: '#', // TODO: add the repo link
+    placeholder: false,
+  },
+  {
+    number: '04',
+    name: 'AEGIS',
+    description:
+      'A personal AI assistant with a chat interface, customizable personalization settings, and locally stored conversation history.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://aegis-alpha-ten.vercel.app/',
+    githubUrl: '#', // TODO: add the repo link
+    placeholder: false,
   },
 ];
 
@@ -38,8 +59,8 @@ function renderProject(project) {
   const links = project.placeholder
     ? `<span class="project__status">Coming soon</span>`
     : `<div class="project__links">
-        ${project.demoUrl ? `<a class="project__link" href="${project.demoUrl}">Live demo <span aria-hidden="true">→</span></a>` : ''}
-        ${project.githubUrl ? `<a class="project__link" href="${project.githubUrl}">GitHub <span aria-hidden="true">→</span></a>` : ''}
+        ${project.demoUrl ? `<a class="project__link" href="${project.demoUrl}" target="_blank" rel="noopener">Live demo <span aria-hidden="true">→</span></a>` : ''}
+        ${project.githubUrl ? `<a class="project__link" href="${project.githubUrl}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>` : ''}
       </div>`;
 
   article.innerHTML = `
@@ -64,4 +85,3 @@ export function initProjects() {
   if (!list) return;
   PROJECTS.forEach((project) => list.appendChild(renderProject(project)));
 }
-
