@@ -14,7 +14,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://ajazedits.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
-    image:assets/ajazedits.jpg, // TODO: e.g. 'assets/ajazedits.png'
+    image:'assets/ajazedits.jpg', // TODO: e.g. 'assets/ajazedits.png'
     placeholder: false,
   },
   {
