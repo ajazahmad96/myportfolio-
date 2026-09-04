@@ -130,4 +130,3 @@ export async function initScene({ prefersReducedMotion, isTouchDevice }) {
     if (prefersReducedMotion) renderer.render(scene, camera);
   });
 }
-
