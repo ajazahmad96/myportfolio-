@@ -1,1 +1,80 @@
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about {
+  padding: var(--space-section) var(--container-pad);
+  border-top: 1px solid var(--color-border);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-8);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.about__intro {
+  max-width: 46ch;
+}
+
+.about__eyebrow {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.about__heading {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.about__text {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.about__text + .about__text {
+  margin-top: var(--space-3);
+}
+
+/* ---- Focus list: replaces a stats row since there are no real
+   numbers to show yet. Each item is what the work is actually about. ---- */
+.about__focus {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.about__focus-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__focus-index {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.about__focus-label {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+
+@media (max-width: 860px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .about__intro {
+    max-width: none;
+  }
+}
 
