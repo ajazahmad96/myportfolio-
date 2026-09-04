@@ -1,1 +1,73 @@
+/* ==========================================================================
+   SERVICES
+   ========================================================================== */
+
+.services {
+  padding: var(--space-section) var(--container-pad);
+  border-top: 1px solid var(--color-border);
+}
+
+.services__header {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+}
+
+.services__heading {
+  font-size: var(--text-3xl);
+  margin-top: var(--space-2);
+}
+
+.services__list {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  border-top: 1px solid var(--color-border);
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr auto;
+  align-items: center;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  transition: padding var(--duration-base) var(--ease-out);
+}
+
+.service:hover {
+  padding-left: var(--space-3);
+  background: var(--color-surface);
+}
+
+.service__name {
+  font-size: var(--text-xl);
+}
+
+.service__description {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 46ch;
+}
+
+.service__indicator {
+  font-size: var(--text-xl);
+  color: var(--color-text-faint);
+  transition: transform var(--duration-base) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.service:hover .service__indicator {
+  color: var(--color-accent);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 700px) {
+  .service {
+    grid-template-columns: 1fr auto;
+    row-gap: var(--space-2);
+  }
+  .service__description {
+    grid-column: 1 / -1;
+  }
+}
 
