@@ -1,1 +1,19 @@
+/* ==========================================================================
+   REVEAL
+   Base state for anything js/reveal.js targets. Kept to one treatment
+   (fade + small rise) applied consistently, rather than a different
+   animation per section.
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
 
