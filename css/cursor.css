@@ -1,1 +1,54 @@
+/* ==========================================================================
+   CURSOR
+   The `.has-custom-cursor` class is added by js/cursor.js only after it
+   successfully attaches — the native cursor is never hidden by CSS alone,
+   so a JS failure can't leave a visitor without any cursor at all.
+   ========================================================================== */
+
+.has-custom-cursor {
+  cursor: none;
+}
+.has-custom-cursor a,
+.has-custom-cursor button,
+.has-custom-cursor input,
+.has-custom-cursor textarea {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  border-radius: 50%;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  background: var(--color-accent);
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  margin: -16px;
+  border: 1px solid var(--color-text-faint);
+  transition: width var(--duration-base) var(--ease-out),
+              height var(--duration-base) var(--ease-out),
+              margin var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out),
+              opacity var(--duration-fast) var(--ease-out);
+}
+
+.cursor-ring.is-hover {
+  width: 52px;
+  height: 52px;
+  margin: -26px;
+  border-color: var(--color-accent);
+}
 
