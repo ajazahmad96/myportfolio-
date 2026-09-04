@@ -59,4 +59,3 @@ export function initCursor({ prefersReducedMotion, isTouchDevice }) {
     ring.style.opacity = '1';
   });
 }
-
