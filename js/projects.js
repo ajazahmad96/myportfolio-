@@ -25,7 +25,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://mrselfdecode.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
-    image: null, // TODO: e.g. 'assets/mrselfdecode.png'
+    image: 'assets/mrselfdecode.jpg', // TODO: e.g. 
     placeholder: false,
   },
   {
