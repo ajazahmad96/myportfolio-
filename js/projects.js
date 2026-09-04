@@ -14,6 +14,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://ajazedits.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
+    image: null, // TODO: e.g. 'assets/ajazedits.png'
     placeholder: false,
   },
   {
@@ -24,6 +25,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://mrselfdecode.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
+    image: null, // TODO: e.g. 'assets/mrselfdecode.png'
     placeholder: false,
   },
   {
@@ -34,6 +36,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://taskpulse2181.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
+    image: null, // TODO: e.g. 'assets/taskpulse.png'
     placeholder: false,
   },
   {
@@ -44,6 +47,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://aegis-alpha-ten.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
+    image: null, // TODO: e.g. 'assets/aegis.png'
     placeholder: false,
   },
 ];
@@ -63,6 +67,13 @@ function renderProject(project) {
         ${project.githubUrl ? `<a class="project__link" href="${project.githubUrl}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>` : ''}
       </div>`;
 
+  // If `image` is set, show the real screenshot. Otherwise fall back to
+  // the grid-pattern + wordmark placeholder — never a broken <img>.
+  const visual = project.image
+    ? `<img src="${project.image}" alt="${project.name} preview" loading="lazy" />`
+    : `<div class="project__visual-pattern"></div>
+       <div class="project__visual-mark">${project.placeholder ? '\u2014' : project.name}</div>`;
+
   article.innerHTML = `
     <div class="project__info">
       <span class="project__number text-numeral">${project.number}</span>
@@ -72,8 +83,7 @@ function renderProject(project) {
       ${links}
     </div>
     <div class="project__visual" role="img" aria-label="${project.name} preview">
-      <div class="project__visual-pattern"></div>
-      <div class="project__visual-mark">${project.placeholder ? '\u2014' : project.name}</div>
+      ${visual}
     </div>
   `;
 
