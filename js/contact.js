@@ -40,4 +40,3 @@ export function initContact() {
     window.location.href = mailto;
   });
 }
-
