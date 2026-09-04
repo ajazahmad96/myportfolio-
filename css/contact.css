@@ -1,1 +1,123 @@
 
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact {
+  padding: var(--space-section) var(--container-pad);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.contact__heading {
+  font-size: var(--text-3xl);
+  max-width: 14ch;
+}
+
+.contact__text {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 38ch;
+}
+
+.contact__links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.contact__link {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2px;
+  transition: color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+}
+
+.contact__link:hover,
+.contact__link:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---- Form ---- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form__label {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  border: 1px solid rgba(245, 247, 250, 0.16);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form__submit {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+.form__status {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  min-height: 1.2em;
+}
+
+.form__status[data-state="error"] {
+  color: #ff8080;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+}
