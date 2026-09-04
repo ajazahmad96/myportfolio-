@@ -37,4 +37,3 @@ export function initHero({ prefersReducedMotion, isTouchDevice }) {
 
   hero.addEventListener('pointermove', onMove, { passive: true });
 }
-
