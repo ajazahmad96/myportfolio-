@@ -73,4 +73,3 @@ export function initNav() {
     sections.forEach((s) => observer.observe(s));
   }
 }
-
