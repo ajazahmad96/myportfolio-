@@ -1,1 +1,58 @@
+/* ==========================================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================================== */
+
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.text-display {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-heading {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-subheading {
+  font-size: var(--text-xl);
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: var(--leading-snug);
+}
+
+.text-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.text-body-lg {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  max-width: 42ch;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Numeric labels — used for project numbering, stat figures.
+   Tabular figures keep digits aligned when they change. */
+.text-numeral {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
 
