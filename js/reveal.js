@@ -54,4 +54,3 @@ export function initReveal({ prefersReducedMotion }) {
 
   elements.forEach((el) => observer.observe(el));
 }
-
