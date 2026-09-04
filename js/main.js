@@ -48,4 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // fetch never blocks the rest of the page from being interactive.
   initScene(motionFlags);
 });
-
