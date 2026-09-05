@@ -36,7 +36,7 @@ const PROJECTS = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://taskpulse2181.vercel.app/',
     githubUrl: '#', // TODO: add the repo link
-    image: null, // TODO: e.g. 'assets/taskpulse.png'
+    image: 'assets/pulse.jpg', // TODO: e.g. 
     placeholder: false,
   },
   {
