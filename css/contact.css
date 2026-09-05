@@ -101,6 +101,11 @@
   margin-top: var(--space-2);
 }
 
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .form__status {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
