@@ -1,28 +1,20 @@
 /* ==========================================================================
    CONTACT FORM
-   No backend is configured yet, so this does NOT pretend to send email
-   silently. On submit it opens the visitor's own email client with the
-   message pre-filled via a mailto: link — genuinely functional, honestly
-   labeled, no fake "Message sent!" success state.
-
-   To connect a real backend later (Formspree, EmailJS, a serverless
-   function, etc.), replace the body of handleSubmit with a fetch() call
-   to that service and update the status message accordingly.
+   Submits directly to Formspree in the background — no email app needs to
+   open, and the visitor sees a real success/error state on the page.
+   Replace FORM_ENDPOINT if you ever switch Formspree forms or providers.
    ========================================================================== */
 
-const CONTACT_EMAIL = 'your-email@example.com'; // TODO: replace with your real address
+const FORM_ENDPOINT = 'https://formspree.io/f/xwlkqzrp';
 
 export function initContact() {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
+  const submitBtn = form?.querySelector('.form__submit');
   if (!form || !status) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    const name = form.elements.namedItem('name');
-    const email = form.elements.namedItem('email');
-    const message = form.elements.namedItem('message');
 
     if (!form.checkValidity()) {
       status.textContent = 'Please fill in all fields with a valid email.';
@@ -31,12 +23,30 @@ export function initContact() {
       return;
     }
 
-    const subject = encodeURIComponent(`Project inquiry from ${name.value}`);
-    const body = encodeURIComponent(`${message.value}\n\n— ${name.value} (${email.value})`);
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-
-    status.textContent = 'Opening your email app to send this…';
+    if (submitBtn) submitBtn.disabled = true;
+    status.textContent = 'Sending…';
     status.dataset.state = 'ok';
-    window.location.href = mailto;
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        status.textContent = "Thanks — I'll get back to you soon.";
+        status.dataset.state = 'ok';
+        form.reset();
+      } else {
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+        status.dataset.state = 'error';
+      }
+    } catch {
+      status.textContent = 'Network error — please check your connection and try again.';
+      status.dataset.state = 'error';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 }
