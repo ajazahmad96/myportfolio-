@@ -10,7 +10,7 @@ const PROJECTS = [
     number: '01',
     name: 'AjazEdits',
     description:
-      'Personal brand website for video-editing services — work showcase, services, testimonials, and a contact section.',
+      'A personal website for my video editing work, featuring selected projects, services, testimonials, and a contact section.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://ajazedits.vercel.app/',
     image:'assets/ajazedits.jpg', // TODO: e.g. 'assets/ajazedits.png'
