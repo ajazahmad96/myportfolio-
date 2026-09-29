@@ -43,7 +43,7 @@ const PROJECTS = [
       'A personal AI assistant with a chat interface, customizable personalization settings, and locally stored conversation history.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://aegis-alpha-ten.vercel.app/',
-    image: null, // TODO: e.g. 'assets/aegis.png'
+    image:'assets/aegis.png', 
     placeholder: false,
   },
 ];
