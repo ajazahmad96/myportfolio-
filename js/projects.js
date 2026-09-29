@@ -20,7 +20,7 @@ const PROJECTS = [
     number: '02',
     name: 'Mr.SelfDecode',
     description:
-      'A multi-page content and brand website for a self-improvement platform, with course, YouTube, and community pages.',
+      'A multi-page website for my self-improvement platform, with dedicated pages for courses, YouTube content, and the community.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://mrselfdecode.vercel.app/',
     image: 'assets/mrselfdecode.jpg', // TODO: e.g. 
@@ -30,7 +30,7 @@ const PROJECTS = [
     number: '03',
     name: 'PULSE',
     description:
-      'A gamified productivity PWA — XP and leveling, streak tracking, and daily/weekly reports with a canvas-based report card export.',
+      'A gamified productivity PWA built to make staying consistent more engaging, with XP, levels, streaks, and daily and weekly progress reports.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://taskpulse2181.vercel.app/',
     image: 'assets/pulse.jpg', // TODO: e.g. 
@@ -40,7 +40,7 @@ const PROJECTS = [
     number: '04',
     name: 'AEGIS',
     description:
-      'A personal AI assistant with a chat interface, customizable personalization settings, and locally stored conversation history.',
+      'A personal AI assistant I’m building with a chat interface, personalized settings, and locally stored conversation history.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://aegis-alpha-ten.vercel.app/',
     image:'assets/aegis.png', 
