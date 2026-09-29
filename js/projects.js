@@ -13,7 +13,6 @@ const PROJECTS = [
       'Personal brand website for video-editing services — work showcase, services, testimonials, and a contact section.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://ajazedits.vercel.app/',
-     // TODO: add the repo link
     image:'assets/ajazedits.jpg', // TODO: e.g. 'assets/ajazedits.png'
     placeholder: false,
   },
@@ -24,7 +23,6 @@ const PROJECTS = [
       'A multi-page content and brand website for a self-improvement platform, with course, YouTube, and community pages.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://mrselfdecode.vercel.app/',
-    githubUrl: '#', // TODO: add the repo link
     image: 'assets/mrselfdecode.jpg', // TODO: e.g. 
     placeholder: false,
   },
@@ -35,7 +33,6 @@ const PROJECTS = [
       'A gamified productivity PWA — XP and leveling, streak tracking, and daily/weekly reports with a canvas-based report card export.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://taskpulse2181.vercel.app/',
-    githubUrl: '#', // TODO: add the repo link
     image: 'assets/pulse.jpg', // TODO: e.g. 
     placeholder: false,
   },
@@ -46,7 +43,6 @@ const PROJECTS = [
       'A personal AI assistant with a chat interface, customizable personalization settings, and locally stored conversation history.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://aegis-alpha-ten.vercel.app/',
-    githubUrl: '#', // TODO: add the repo link
     image: null, // TODO: e.g. 'assets/aegis.png'
     placeholder: false,
   },
