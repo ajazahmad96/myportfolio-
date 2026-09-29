@@ -13,7 +13,7 @@ const PROJECTS = [
       'Personal brand website for video-editing services — work showcase, services, testimonials, and a contact section.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://ajazedits.vercel.app/',
-    githubUrl: '#', // TODO: add the repo link
+     // TODO: add the repo link
     image:'assets/ajazedits.jpg', // TODO: e.g. 'assets/ajazedits.png'
     placeholder: false,
   },
